@@ -1,0 +1,32 @@
+'  First Macros in Excel
+Private Sub CommandButton1_Click()
+    ' Range("A1").Interior.Color = RGB(55, 90, 180)
+    ' x = Range("A1") + Range("B1")
+    ' Range("A2").Value = x
+    
+    ' Excercise: Set the cell A5 to: A+, if A1 > 90
+    ' Set to A, if A1 > 80
+    ' Etc...
+    
+    x = Range("A1").Value
+    
+    Range("A5").Font.Size = 25
+    Range("A5").Interior.Color = RGB(55, 90, 180)
+    Range("A5").Font.Color = RGB(255, 255, 255)
+        
+    If x > 90 Then
+        Range("A5").Value = "A+"
+    ElseIf x > 80 Then
+        Range("A5").Value = "A"
+    ElseIf x > 70 Then
+        Range("A5").Value = "B+"
+    ElseIf x > 60 Then
+        Range("A5").Value = "C"
+    ElseIf x > 50 Then
+        Range("A5").Value = "D"
+    Else
+        Range("A5").Value = "F"
+    End If
+    
+        
+End Sub
