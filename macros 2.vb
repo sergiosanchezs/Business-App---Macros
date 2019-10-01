@@ -77,5 +77,8 @@ Private Sub CommandButton1_Click()
     ' Fill in cells A50:A60 and B50:B60 with random numbers
     Worksheets(1).Range("A50:B60").HorizontalAlignment = xlHAlignCenter
     Worksheets(1).Range("A50:B60").Formula = "=RANDBETWEEN(0,100)"
+    
+    ' Insert a "scatter" chart in D50 for the data recorded in A50:A60 and B50:B60
+    
 
 End Sub
