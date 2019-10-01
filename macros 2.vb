@@ -74,4 +74,8 @@ Private Sub CommandButton1_Click()
     ' Assing a formula to cell c44 to sum the cells A20 to A40
     Worksheets(1).Range("C44").Formula = "=SUM(A20:B40)"
     
+    ' Fill in cells A50:A60 and B50:B60 with random numbers
+    Worksheets(1).Range("A50:B60").HorizontalAlignment = xlHAlignCenter
+    Worksheets(1).Range("A50:B60").Formula = "=RANDBETWEEN(0,100)"
+
 End Sub
