@@ -71,5 +71,7 @@ Private Sub CommandButton1_Click()
     x = WorksheetFunction.Sum(Worksheets(1).Range("A20:A40,B20:B40"))
     Worksheets(1).Range("C43").Value = x
     
+    ' Assing a formula to cell c44 to sum the cells A20 to A40
+    Worksheets(1).Range("C44").Formula = "=SUM(A20:B40)"
     
 End Sub
