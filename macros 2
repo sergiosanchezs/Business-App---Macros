@@ -19,13 +19,15 @@ Private Sub CommandButton1_Click()
     
     ' Assigning each letter to one cell: way 1
     For i = 0 To UBound(greet)
-        Cells(i + 1, 8).Value = greet(i)
+        Worksheets(1).Cells(i + 1, 8).HorizontalAlignment = xlHAlignCenter
+        Worksheets(1).Cells(i + 1, 8).Value = greet(i)
     Next i
     Worksheets(1).Range("H1:H13").Columns.AutoFit
     
     ' Assigning each letter to one cell: way 2
     For i = 0 To UBound(greet)
-        Range("J" & i + 1).Value = greet(i)
+        Worksheets(1).Range("J" & i + 1).HorizontalAlignment = xlHAlignCenter
+        Worksheets(1).Range("J" & i + 1).Value = greet(i)
     Next i
     Worksheets(1).Range("J1:J13").Columns.AutoFit
     
