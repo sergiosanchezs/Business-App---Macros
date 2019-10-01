@@ -42,7 +42,7 @@ Private Sub CommandButton1_Click()
     ' Generating values automatic
     For c = 1 To 2
         For r = 20 To 40
-            Worksheets(1).Cells(r, c).Value = Rnd() * 100
+            Worksheets(1).Cells(r, c).Value = Round(Rnd() * 100, 2)
         Next r
     Next c
     
@@ -50,6 +50,8 @@ Private Sub CommandButton1_Click()
     Sum = 0
     For c = 1 To 2
         For r = 20 To 40
+            Worksheets(1).Cells(r, c).NumberFormat = "0.00"
+            Worksheets(1).Cells(r, c).HorizontalAlignment = xlHAlignCenter
             Sum = Sum + Worksheets(1).Cells(r, c).Value
         Next r
     Next c
